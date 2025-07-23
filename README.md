@@ -1,5 +1,4 @@
 # flight-finder
-# flight-finder
 
 An intelligent flight search application that uses AI agents to find and compare flights across different booking platforms. Built with CrewAI, Selenium web scraping, and Google's Gemini AI for smart flight recommendations.
 
