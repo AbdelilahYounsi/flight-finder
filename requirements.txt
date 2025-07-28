@@ -1,8 +1,8 @@
 streamlit
+crewai
+html2text
+playwright
 selenium
 beautifulsoup4
 python-dotenv
-langchain-core
-langchain-mistralai
-langgraph
 typing-extensions
