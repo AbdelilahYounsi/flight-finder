@@ -16,7 +16,7 @@ def webscraper(url: str):
     :param url: The URL to load
     :return: The text content of the page
     """
-    # Set up Chrome options for headless browsing
+    
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
