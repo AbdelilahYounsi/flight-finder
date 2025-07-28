@@ -9,10 +9,10 @@ from dotenv import load_dotenv
 os.environ["GEMINI_API_KEY"] = ""
 
 # Page configuration
-st.set_page_config(page_title="✈️ FlightFinder Pro", layout="wide")
+st.set_page_config(page_title="✈️ FlightFinder", layout="wide")
 
 # Title and subtitle with custom HTML for blue color
-st.markdown("<h1 style='color: #0066cc;'>✈️ FlightFinder Pro</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: #0066cc;'>✈️ FlightFinder</h1>", unsafe_allow_html=True)
 st.subheader("Powered by Selenium and CrewAI with GEMINI")
 # Sidebar for API key input
 with st.sidebar:
@@ -72,9 +72,8 @@ summarize_agent = Agent(
 )
 
 output_search_example = """
-Here are our top 5 flights from San Francisco to New York on 21st September 2024:
-1. Delta Airlines: Departure: 21:35, Arrival: 03:50, Duration: 6 hours 15 minutes, Price: $125, Details: https://www.kayak.com/flights/sfo/jfk/2024-09-21/12:45/13:55/2:10/delta/airlines/economy/1
-"""
+Here are our top 5 flights from Paris to Marrakech on 06th June 2025:
+1. Air France: Departure: 10:20, Arrival: 12:55, Duration: 3 hours 35 minutes, Price: $150, Details: https://www.kayak.com/flights/par/rak/2025-06-06/10:20/12:55/3:35/airfrance/economy/1"""
 
 search_task = Task(
     description=(
@@ -85,15 +84,16 @@ search_task = Task(
 )
 
 output_providers_example = """
-Here are our top 5 picks from San Francisco to New York on 21st September 2024:
-1. Delta Airlines:
-    - Departure: 21:35
-    - Arrival: 03:50
-    - Duration: 6 hours 15 minutes
-    - Price: $125
-    - Booking: [Delta Airlines](https://www.kayak.com/flights/sfo/jfk/2024-09-21/12:45/13:55/2:10/delta/airlines/economy/1)
+Here are our top 5 picks from Paris to Marrakech on 06th June 2025:
+1. Air France:
+    - Departure: 10:20
+    - Arrival: 12:55
+    - Duration: 3 hours 35 minutes
+    - Price: $150
+    - Booking: [Air France](https://www.kayak.com/flights/par/rak/2025-06-06/10:20/12:55/3:35/airfrance/economy/1)
     ...
 """
+
 
 search_booking_providers_task = Task(
     description="Load every flight individually and find available booking providers",
